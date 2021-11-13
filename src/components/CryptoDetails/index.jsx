@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import millify from "millify";
 import { Col, Row, Typography, Select } from "antd";
 import { MoneyCollectOutlined, DollarCircleOutlined, FundOutlined, ExclamationCircleOutlined, StopOutlined, TrophyOutlined, CheckOutlined, NumberOutlined, ThunderboltOutlined } from "@ant-design/icons";
+import { LineChart } from ".."
 
 import { useGetCryptoDetailsQuery, useGetCryptoHistoryQuery } from "../../services/cryptoAPI";
 
