@@ -16,9 +16,15 @@ export const cryptoApi = createApi({
     getCryptos: builder.query({
       // params added to query hook is accessible here
       query: (count) => createRequest(`/coins?limit=${count}`)
+    }),
+    getCryptoDetails: builder.query({
+      query: (coinId) => createRequest(`/coin/${coinId}`)
+    }),
+    getCryptoHistory: builder.query({
+      query: ({ coinId, timePeriod }) => createRequest(`/coin/${coinId}/history/${timeperiod}`)
     })
   })
 })
 
 // RTK automatically creates this hook based on the endpoints created on createApi function
-export const { useGetCryptosQuery } = cryptoApi;
+export const { useGetCryptosQuery, useGetCryptoDetailsQuery, useGetCryptoHistoryQuery } = cryptoApi;
